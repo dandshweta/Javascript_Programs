@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //create
+  flower = {
+    color: "red",
+    size: "medium",
+    name: "rose",
+    quantity: 5000,
+    details: {
+      location: "pune",
+      other_rose: ["pink", "white", "yellow", "pink"],
+      brand: "indian",
+      info: function () {
+        console.log(this.name);
+      },
+    },
+  };
+  //   delete flower.quantity;
+
+  //read
+  flower.info();
+  console.log(flower);
+  console.log(flower.color);
+  console.log(Object.keys(flower));
+  //update
+  flower.color = "pink";
+  //delete
+  delete flower.quantity;
+  delete flower.details.other_rose[1];
+
+  //optional chaining
+  console.log(flower?.something?.something);
+</script>
